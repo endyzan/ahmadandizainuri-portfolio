@@ -1,0 +1,133 @@
+@media screen and (max-width: 580px) {
+    nav > div > ul > li:nth-of-type(2) a{
+        text-decoration: underline var(--accent-color);
+        color: var(--accent-color);
+    } 
+} @media screen and (min-width: 581px) {
+    nav > div > ul > li:nth-of-type(2) a{
+        text-decoration: underline var(--accent-color);
+        text-decoration-thickness: 2px;
+    }
+}
+
+/*--------------------------------------------------------------------------------------------------------------------------*/
+/*SECCION PÁGINAS*/
+#webs {
+  margin-top: 90px;
+  width: 100%;
+  color: var(--blanco);
+} #webs > p:first-of-type {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+/*imagen y overlay*/
+.previews {
+  object-fit: cover;
+  object-position: top center;
+  height: 100%;
+  width: 100%;
+} .project_ctn-image {
+  cursor: pointer; 
+  display: flex;
+  justify-content: center;
+  align-content: center; 
+  position: relative;
+} .overlay_projectImg {
+  background: linear-gradient(0.4deg, #191919 0.15%, rgba(217, 217, 217, 0) 109.97%);
+  background-color: rgba(46, 46, 46, 0.523);
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  z-index: 5;    
+  opacity: 0;
+  -webkit-transition: all 0.2s;
+  transition: all 0.2s;
+} .overlay_projectImg > div {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  height: 100%;
+  padding: 8vh;
+} .overlay_projectImg > div > a {
+  background-color: transparent;
+  border: 2px solid var(--blanco);
+  border-radius: 20px;
+  color: var(--blanco);
+  font-weight: 600;
+  padding: 0.5rem 1rem;
+} .overlay_projectImg > div  > a:active, .overlay_projectImg > div  > a:hover {
+  background-color: var(--blanco);
+  color: var(--fondo);
+}  .overlay_projectImg:hover {
+  opacity: 1;
+  animation-direction: alternate;
+  transition: all 0.2s;
+  -webkit-transition: all 0.2s;
+} 
+
+/*texto*/
+.ctn_project_texts a{
+  text-decoration: underline var(--accent-color);
+  text-decoration-thickness: 2px;
+  color: var(--blanco);
+} .ctn_project_texts a:hover{
+  color: var(--accent-color);
+} .ctn_project_texts > div img {
+  width: 25px;
+  margin-right: 10px;
+} .ctn_project_texts p {
+  margin-bottom: 10px;
+}
+
+/*MEDIA SCREENS y breakpoints*/
+@media (max-width: 1024px) {
+  .ctn_project {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+    margin: 50px 0px;
+    padding: 0px 5vw;
+  } .project_ctn-image {
+    width: 100%;
+    height: 60vh;
+  } .ctn_project_texts {
+    text-align: center;
+    padding: 20px 4% 0px;
+  } .project_ctn-image > div {
+    width: 100%;
+  }
+}
+@media (min-width: 1025px) {
+  .ctn_project {
+    width: 100%;
+    margin-bottom: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 5%;
+  } .ctn_project:nth-of-type(2n) {
+    flex-direction: row-reverse;
+  }
+  .project_ctn-image {
+    display: inline-block;
+  } .project_ctn-image > div {
+    width: 50vw;
+  } .project_ctn-image > div:nth-of-type(2) {
+    height: 100%
+  }
+  .ctn_project_texts {
+    text-align: left;
+    display: inline-block;
+  }.ctn_project:nth-of-type(2n) .ctn_project_texts{
+    margin-right: 20px;
+    margin-left: 0px;
+  }.ctn_project_texts{
+    margin-left: 20px;
+  }
+}
